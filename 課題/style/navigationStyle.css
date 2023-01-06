@@ -1,0 +1,469 @@
+/* move background (https://webdesignfacts.net/entry/css-background-animation/#gsc.tab=0)
+---------------------------------------------------------------------------------------------------- */
+#movebg{
+    height: 100vh;
+    background: rgb(255, 249, 241);  
+    /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
+    position: fixed;
+    z-index: -2;
+}
+.bg-circles{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+.bg-circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+.bg-circles li:nth-child(1){
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.bg-circles li:nth-child(2){
+    left: 3%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.bg-circles li:nth-child(3){
+    left: 86%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.bg-circles li:nth-child(4){
+    left: 13%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.bg-circles li:nth-child(5){
+    left: 97%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.bg-circles li:nth-child(6){
+    left: 73%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+.bg-circles li:nth-child(7){
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+.bg-circles li:nth-child(8){
+    left: 58%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+.bg-circles li:nth-child(9){
+    left: 17%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+.bg-circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+/* move background's li color
+------------------------------------------------- */
+#movebg-idolMaster li {
+    background: rgba(255, 116, 184, 0.3);
+}
+#movebg-as li {
+    background: rgba(243, 79, 109, 0.3);
+}
+#movebg-cinderella li {
+    background: rgba(38, 129, 200, 0.3);
+}
+#movebg-million li {
+    background: rgba(255, 195, 11, 0.3);
+}
+#movebg-sideM li {
+    background: rgba(15, 190, 148, 0.3);
+}
+#movebg-shiny li {
+    background: rgba(141, 187, 255, 0.3);
+}
+
+
+/* main background
+--------------------------------------------------------------------------------------------*/
+#mainbg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+#mainbg img {
+    box-sizing: border-box;
+    width: 62%;
+    height: 100%;
+    margin-left: 19%;
+    object-fit: cover;
+    opacity: .75;
+}
+/* header
+---------------------------------------------------------------------------------------------*/
+.header {
+    height: 10vh;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    justify-content: space-between;
+    padding: 1% 0 0 3%;
+    background-color: rgba(224, 224, 224, 0.65);
+}
+.filter-bokasi {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.filter-bokasi:before {
+    opacity: 0.6;
+}
+#hpname {
+    display: block;
+    font: optional;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 1.5rem;
+    opacity: 1;
+    padding-top: 1%;
+}
+/* topnav setting
+------------------------------------------------------------------------------------------*/
+.topnav {
+    padding-right: 4%;
+}
+#topnav-flex {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-top: 1%;
+}
+.topnav li.topnav-main {
+    border-radius: 20px;
+    margin-left: 2rem;
+    position: relative;
+}
+.topnav li.topnav-main:hover {
+    background: rgba(231, 231, 231, 0.95);
+    transition: all .2s;
+}
+.topnav a.topnav-main {
+    display: block;
+    text-transform: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+.topnav ul li.haschild::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 12.5px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+}
+/* 2階層 */
+.topnav ul ul {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: .8rem;
+}
+.topnav ul ul a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 5px;
+    padding-left: 15px;
+}
+.topnav ul ul li.haschild {
+    position: relative;
+}
+.topnav ul ul li.haschild::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8.5px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+}
+.topnav li.haschild ul {
+    position: absolute;
+    left: 0;
+    top: 38px;
+    z-index: 5;
+    width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.topnav li.haschild:hover > ul,
+.topnav li.haschild ul li:hover > ul,
+.topnav li.haschild:active > ul,
+.topnav li.haschild ul li:active > ul{
+    visibility: visible;
+    opacity: 1;
+}
+.topnav li.haschild ul li a {
+    border-radius: 20px;
+    color: #333;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+}
+.topnav li.haschild ul li a:hover,
+.topnav li.haschild ul li a:active {
+    background: rgba(231, 231, 231, 0.95);
+    transition: all .2s;
+}
+
+/* smallnav-btn setting
+----------------------------------------------------------------------------*/
+.smallnavbtn-wrapper {
+    position: fixed;
+    top: 5px;
+    right: 2vw;
+    visibility: hidden;
+    z-index: 9;
+}
+.smallnav-btn{
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 15px;
+    background-color: rgb(251, 251, 251);
+    z-index: 10;
+}
+.smallnav-btn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 1px;
+    border-radius: 5px;
+    background: #000;
+    width: 45%;
+}
+.smallnav-btn span:nth-of-type(1) {
+    top:13px; 
+}
+.smallnav-btn span:nth-of-type(2) {
+    top:19px;
+}
+.smallnav-btn span:nth-of-type(3) {
+    top:25px;
+}
+.smallnav-btn p::after {
+    content:"Menu";
+    position: absolute;
+    top:30px;
+    left:10px;
+    color: #000;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+.smallnav-btn.active span:nth-of-type(1) {
+      top: 14px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+}
+.smallnav-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.smallnav-btn.active span:nth-of-type(3){
+      top: 26px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+}
+.smallnav-btn.active p::after {
+    content:"Close";
+    top:30px;
+    left:8px;
+}
+
+/* smallnav
+------------------------------------------------------------------------------------*/
+.smallnav {
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    position:fixed;
+    z-index: -1;
+    opacity: 0;
+    top:0;
+    background:rgba(255,255,255,0.3);
+    transition: all 0.3s;
+}
+.smallnav.panelactive {
+    visibility: visible;
+    opacity: 1;
+    z-index: 4;
+}
+.back-snav {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    visibility: hidden;
+    top: 10vh;
+    left: 12vw;
+    width: 100px;
+    height: 40px;
+}
+.back-snav.snabtnactive {
+    visibility: visible;
+}
+.back-snav p {
+    padding-top: 10px;
+    font-size: .9rem;
+    text-align: center;
+}
+.snav-list {
+    padding-top: 10vh;
+}
+.snav-list ul {
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top:50%;
+    left:100%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.snav-list ul.snav-show{
+    left: 50%;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.snav-list ul.snav-selected{
+    left: 20%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#snav-index {
+    left: 20%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+#snav-index.snav-show {
+    left: 50%;
+    opacity: 1;
+}
+.snav-list li {
+    cursor: pointer;
+    text-align: center;
+    font-size: .8rem;
+    white-space: nowrap;
+}
+.snav-list li.snav {
+    position: relative;
+    text-decoration: none;
+    padding: 3vh;
+    display: block;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+/* .snav-list li.hasnext::before {
+    content: '';
+    position: absolute;
+    left: 150px;
+    top: 22.5px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+} */
+
+/* screen 1000 
+------------------------------------------------------------------------------------- */
+@media (max-width: 1170px)  {
+    /* topnav */
+    .topnav {
+        padding-right: 2%;
+    }
+    .topnav a.topnav-main {
+        padding: 5px 10px;
+    }
+    /* 2階層 */
+    .topnav ul li.haschild::before {
+        left: 2px;
+        top: 8px;
+    }
+    .topnav li.haschild ul {
+        top: 30px;
+        width: 210px;
+    }
+}
+
+/* mobile
+--------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1020px) {
+    /* topnav */
+    .header {
+        position: fixed;
+        height: 10vh;
+    }
+    #hpname {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%) translateX(-10%);
+    }
+    .bg-circles{
+        width: 100vw;
+        height: 100vh;
+    }
+    #mainbg {
+        visibility: hidden;
+    }
+    .topnav {
+        visibility: none;
+    }
+    .smallnavbtn-wrapper {
+        visibility: visible;
+        margin-left: 85vw;
+    }
+}

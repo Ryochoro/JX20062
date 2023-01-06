@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ver. 1.0.0-->
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"/>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./style/destyle.css">
+    <link rel="stylesheet" href="./style/HPstyle.css">
+    <link rel="stylesheet" href="./style/navigationStyle.css">
+
+</head>
+<body>
+    <div id="movebg">
+        <ul class="bg-circles" id="movebg-idolMaster">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header filter-bokasi">
+            <div id="hpname">
+                <a href="#">iDOLM@STER</a></div>
+            <nav class="topnav">
+                <ul id="topnav-flex">
+                    <li class="haschild topnav-main">
+                        <a class="topnav-main" href="#">AS(無印)</a>
+                        <ul>
+                            <li class=""><a href="./pages/AS.html">AS</a></li>
+                            <li class=""><a href="./pages/Putimasu.html">ぷちます</a></li>
+                        </ul>
+                    </li>
+                    <li class="topnav-main">
+                        <a class="topnav-main" href="./pages/CinderellaGirls.html">シンデレラガールズ</a></li>
+                    <li class="topnav-main">
+                        <a class="topnav-main" href="./pages/MillionLive.html">ミリオンライブ！</a>
+                    </li>
+                    <li class="topnav-main">
+                        <a class="topnav-main" href="./pages/SideM.html">SideM</a>
+                    </li>
+                    <li class="topnav-main">
+                        <a class="topnav-main" href="./pages/ShinyColors.html">シャイニーカラーズ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="smallnavbtn-wrapper"><div class="smallnav-btn"><span></span><span></span><span></span><p></p></div></div>
+        <div class="smallnav">
+            <div class="back-snav"><p>Back</p></div>
+            <div class="snav-list">
+                <ul class="snav-show" id="snav-index" data-snavlevel="1">
+                    <li class="hasnext snav" data-snavselector="AS" data-snavparentid="snav-index">AS(無印)</li>
+                    <li class="snav"><a href="./pages/CinderellaGirls.html">シンデレラガールズ</a></li>
+                    <li class="snav"><a href="./pages/MillionLive.html">ミリオンライブ！</a></li>
+                    <li class="snav"><a href="./pages/SideM.html">SideM</a></li>
+                    <li class="snav"><a href="./pages/ShinyColors.html">シャイニーカラーズ</a></li>
+                </ul>
+                <ul id="snav-AS" data-snavlevel="2">
+                    <li class="snav"><a href="./pages/AS.html">AS</a></li>
+                    <li class="snav"><a href="./pages/Putimasu.html">ぷちます</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- contents -->
+        <div class="content">
+            <h1>THE iDOLM@STER</h1>
+            <h2>尾崎遼平君のアイマスＣＤチェッカーです</h2>
+            <p style="margin-bottom: 10vh;">気が向いたら更新します</p>
+            <div style="text-align: center;"><img src="./assets/BookShelf.jpg" alt="本棚"></div>
+            <iframe style="padding-top: 5vh;" width="560" height="315" src="https://www.youtube.com/embed/HJKqSYK_z0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p style="padding-top: 10vh;">ＣＤ等の著作権の帰属　窪岡俊之 　BANDAI NAMCO Entertainment Inc.</p>
+        </div> 
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scripts/mainscript.js"></script>
+
+</body>
+</html>

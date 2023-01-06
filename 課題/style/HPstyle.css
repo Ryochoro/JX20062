@@ -1,0 +1,108 @@
+@charset "utf-8";
+/*基本的なスタイルシート*/
+/* page setting */
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+body {
+    max-width: 100%;
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+}
+
+/* body-content 
+--------------------------------------------------------------------------------------*/
+.content {
+    padding-top: 15vh;
+    padding-bottom: 20vh;
+    width: 60%;
+    margin: 0 auto;
+    z-index: 4;
+    /* background-color: rgba(255, 255, 255, 0.65); */
+}
+img {
+    width: 58vw;
+    height: auto;
+    padding-bottom: 5vh;
+}
+.CDbox {
+    margin-top: 7%;
+}
+h1 {
+    margin-top: 2%;
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+h2 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.3rem;
+}
+h3 {
+    font-size: 1.3rem;
+    text-decoration: underline
+}
+.CDseries {
+    list-style-type: decimal-leading-zero;
+}
+.CDcontent {
+
+}
+.description {
+    font-size: 0.9rem;
+}
+
+
+/* screen 1000 
+------------------------------------------------------------------------------------- */
+@media (max-width: 1170px)  {
+    /* topnav */
+    .topnav {
+        padding-right: 2%;
+    }
+    .topnav a.topnav-main {
+        padding: 5px 10px;
+    }
+    /* 2階層 */
+    .topnav ul li.haschild::before {
+        left: 2px;
+        top: 8px;
+    }
+    .topnav li.haschild ul {
+        top: 30px;
+        width: 210px;
+    }
+}
+
+/* mobile
+--------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1020px) {
+    /* topnav */
+    .header {
+        position: relative;
+    }
+    #hpname {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%) translateX(-10%);
+    }
+    .bg-circles{
+        width: 100vw;
+        height: 100vh;
+    }
+    #mainbg {
+        visibility: hidden;
+    }
+    .topnav {
+        visibility: hidden;
+    }
+    .smallnavbtn-wrapper {
+        visibility: visible;
+        margin-left: 85vw;
+    }
+    .content {
+        width: 80%;
+    }
+}
